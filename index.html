@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password_generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#40155F] box-border select-none">
+
+    <div class="flex justify-center items-center flex-col w-[100vw] h-[100vh] gap-5">
+        <div class="w-[90%] max-w-[450px]">
+
+
+            <h1 class=" text-[3vh] sm:text-[2rem] text-gray-200 font-bold opacity-65 leading-2 tracking-wide text-center p-4">
+                PASSWORD GENERATOR
+            </h1>
+            <div class="bg-[#160628] rounded-2xl relative border-b-4 my-4 border-blue-200 flex justify-between px-4" >
+                <input type="text" readonly placeholder="PASSWORD" disPass class="bg-transparent text-[#AB9435] p-5 text-[1.2rem] placeholder:text-[1.2rem] placeholder:absolute  placeholder:text-[#AB9435]">
+                <button class="copyBtn"> 
+                    <span copyBlock class="tooltip"></span>
+                    <img src="copy.svg" alt="" copyBtn class="w-6 h-6">
+                </button>
+            </div> 
+
+            <div class="bg-[#160628] p-4 rounded-2xl text-white check">
+                <div class="flex justify-between items-center p-3">
+                    <div class="text-[1.5rem] tracking-normal">
+                        Password Length
+                    </div>
+                    <div pasLen class="text-[#DAE53D] text-[1.5rem] font-semibold">
+                        0
+                    </div>
+                </div>
+                <input type="range" name="" id=""  min="1" max="20" sliderVal class="w-[90%] mx-[15px] h-2 p-2  rounded-full  appearance-none  slider">
+                <div class="flex space-x-5 items-center p-3 w-full">
+                    <input type="checkbox" name="Upper" id="uppercase" class="appearance-none w-[24px] h-[24px] border-[#00E0D1] border rounded-md relative cursor-pointer checked:bg-[#00E0D1] " >
+                    <label for="Upper" class="text-[2vh] sm:text-[1.2rem] font-semibold leading-3 tracking-widest">Include UpperCase Letters</label>
+                </div>
+                <div class="flex space-x-5 items-center p-3 w-full">
+                    <input type="checkbox" name="Lower" id="lowercase" class="appearance-none w-[24px] h-[24px] border-[#00E0D1] border rounded-md relative cursor-pointer checked:bg-[#00E0D1] " >
+                    <label for="Upper" class="text-[2vh] sm:text-[1.2rem] font-semibold leading-3 tracking-widest">Include LowerCase Letters</label>
+                </div>
+                <div class="flex space-x-5 items-center p-3 w-full">
+                    <input type="checkbox" name="Number" id="numbers" class="appearance-none w-[24px] h-[24px] border-[#00E0D1] border rounded-md relative cursor-pointer checked:bg-[#00E0D1] " >
+                    <label for="Upper" class="text-[2vh] sm:text-[1.2rem] font-semibold leading-3 tracking-widest">Include Number</label>
+                </div>
+                <div class="flex space-x-5 items-center p-3 w-full">
+                    <input type="checkbox" name="Symbol" id="symbols" class="appearance-none w-[24px] h-[24px] border-[#00E0D1] border rounded-md relative cursor-pointer checked:bg-[#00E0D1] " >
+                    <label for="Upper" class="text-[2vh] sm:text-[1.2rem] font-semibold leading-3 tracking-widest">Include Symbol</label>
+                </div>
+
+                <div class="flex justify-between p-4 items-center">
+                    <div class="text-[1.5rem] tracking-wider text-center">
+                        Strength
+                    </div>
+                    <div indic class="w-[20px] h-[20px] rounded-full bg-[#808080] shadow-xl mix-blend-lighten shadow-current ">
+
+                    </div>
+                </div>
+                <button ansGen class="w-full bg-[#BC15F4] p-5 text-[1.3rem] rounded-2xl text-[#FFE53D] font-semibold leading-4 tracking-wide border-b-[#FFE53D] border-b-[6px] ">
+                      Generate Password
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
